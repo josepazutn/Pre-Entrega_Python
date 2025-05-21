@@ -7,7 +7,10 @@
 \usepackage[T1]{fontenc}
 \usepackage[spanish, provide=*]{babel}
 \usepackage{geometry}
+\usepackage{hyperref}
 \geometry{a4paper, margin=2.5cm}
+\setlength{\headheight}{14.5pt}
+\addtolength{\topmargin}{-2.5pt}
 
 % --- Carátula ---
 \title{Python Inicial}
@@ -51,7 +54,9 @@ Con el objetivo de realizar un inventario de productos realizados en python, se 
 
 \section{Implementación}
 
-Utilizo la función main como función principal del programa, en cual muestra un menu con opciones al usuario, y según la opcion elegida realiza alguno de los requisitos solicitados.
+Utilizo la función main como función principal del programa, el cual muestra un menu con opciones al usuario, y según la opcion elegida realiza alguno de los requisitos solicitados.
+
+Para correr el programa desde una terminal ubicada donde se encuentran los archivos de python y el archivo makefile ingresar \textit{make}, como muesta la \autoref{fig:Correr el programa}
 
 \begin{figure}[H]
 	\centering
@@ -61,6 +66,8 @@ Utilizo la función main como función principal del programa, en cual muestra u
 	\label{fig:Correr el programa}
 \end{figure}  
 
+El programa refresca la terminal y muestra un menu con opciones, se le solicita al usuario que ingrese un número del menu entre las disponibles, como se muestra en la \autoref{fig:menu}.
+
 \begin{figure}[H]
 	\centering
 	\setlength{\fboxrule}{0pt}
@@ -68,6 +75,8 @@ Utilizo la función main como función principal del programa, en cual muestra u
 	\caption{Mostrando el menu}
 	\label{fig:menu}
 \end{figure} 
+
+Al ingresar la opción $1$, de solicita el nombre, categoria y precio del nuevo producto para almacenarlo en la lista productos, como se muentra en la \autoref{fig:nuevo producto}.
 
 \begin{figure}[H]
 	\centering
@@ -77,13 +86,17 @@ Utilizo la función main como función principal del programa, en cual muestra u
 	\label{fig:nuevo producto}
 \end{figure} 
 
+Posteriormente al ingresar la opción $2$, se lista los productos en el inventario, como se muestra en la \autoref{fig:mostrar productos}.
+
 \begin{figure}[H]
 	\centering
 	\setlength{\fboxrule}{0pt}
 	\includegraphics[width=0.5\textwidth]{img3.png}
 	\caption{Mostrar productos}
-	\label{fig:mostras productos}
+	\label{fig:mostrar productos}
 \end{figure} 
+
+Para buscar un producto por su nombre se ingresa la opcion $3$, el programa busca en la lista del inventario y va almacenando en una lista auxiliar todos los productos que coinciden con el nombre del producto, y lo muestra por la terminal, como se muestra en la \autoref{fig:buscar producto}.
 
 \begin{figure}[H]
 	\centering
@@ -93,6 +106,8 @@ Utilizo la función main como función principal del programa, en cual muestra u
 	\label{fig:buscar producto}
 \end{figure} 
 
+Con la opción $4$, se puede eliminar un producto con la posición en la lista mostrada por terminal, como se muestra en \autoref{fig:eliminar producto}.
+
 \begin{figure}[H]
 	\centering
 	\setlength{\fboxrule}{0pt}
@@ -101,6 +116,7 @@ Utilizo la función main como función principal del programa, en cual muestra u
 	\label{fig:eliminar producto}
 \end{figure} 
 
+Finalmente para finalizar el programa se ingresa la opción $5$, y se muestra por terminal un mensaje de finalización, como en la \autoref{fig:fin programa}.
 \begin{figure}[H]
 	\centering
 	\setlength{\fboxrule}{0pt}
@@ -126,6 +142,6 @@ Utilizo la función main como función principal del programa, en cual muestra u
 
 \section{Conclusión}
 
-En este informe realizado al combinar \LaTeX y Python se presenta una simplificación del programa inventario.
+En este informe realizado al combinar \LaTeX y Python se presenta una simplificación del programa inventario, donde se pudo aplicar lo aprendido en clases, como listas, condicionales, bucles, ademas se uso modulacion y funciones, además de el uso de la función main y un makefile para ejecutar de un forma más práctica el código.
 
 \end{document}

@@ -8,8 +8,8 @@ from metodos_productos import ( ingresar_producto ,
 	mostrar_productos , buscar_producto , eliminar_producto )
 
 #De menu.py importa los metodos: 
-#limpiar_pantalla, mostrar_menu, ejecutar_opcion.
-from menu import (	limpiar_pantalla , mostrar_menu , 
+#limpiar_pantalla, mostrar_menu, ejecutar_opcion, ingresar_opcion.
+from menu import ( limpiar_pantalla , mostrar_menu , 
 	ejecutar_opcion , ingresar_opcion )
     
 #Funcion principal

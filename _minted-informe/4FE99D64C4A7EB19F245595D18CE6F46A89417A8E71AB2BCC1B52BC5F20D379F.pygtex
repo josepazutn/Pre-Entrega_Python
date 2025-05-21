@@ -9,8 +9,8 @@
 	\PYG{n}{mostrar\PYGZus{}productos} \PYG{p}{,} \PYG{n}{buscar\PYGZus{}producto} \PYG{p}{,} \PYG{n}{eliminar\PYGZus{}producto} \PYG{p}{)}
 
 \PYG{c+c1}{\PYGZsh{}De menu.py importa los metodos: }
-\PYG{c+c1}{\PYGZsh{}limpiar\PYGZus{}pantalla, mostrar\PYGZus{}menu, ejecutar\PYGZus{}opcion.}
-\PYG{k+kn}{from} \PYG{n+nn}{menu} \PYG{k+kn}{import} \PYG{p}{(}	\PYG{n}{limpiar\PYGZus{}pantalla} \PYG{p}{,} \PYG{n}{mostrar\PYGZus{}menu} \PYG{p}{,} 
+\PYG{c+c1}{\PYGZsh{}limpiar\PYGZus{}pantalla, mostrar\PYGZus{}menu, ejecutar\PYGZus{}opcion, ingresar\PYGZus{}opcion.}
+\PYG{k+kn}{from} \PYG{n+nn}{menu} \PYG{k+kn}{import} \PYG{p}{(} \PYG{n}{limpiar\PYGZus{}pantalla} \PYG{p}{,} \PYG{n}{mostrar\PYGZus{}menu} \PYG{p}{,} 
 	\PYG{n}{ejecutar\PYGZus{}opcion} \PYG{p}{,} \PYG{n}{ingresar\PYGZus{}opcion} \PYG{p}{)}
     
 \PYG{c+c1}{\PYGZsh{}Funcion principal}

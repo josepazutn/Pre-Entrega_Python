@@ -4,13 +4,21 @@
 
 #De metodos_productos.py importa los metodos: 
 #ingresar_producto, mostrar_productos, buscar_producto, eliminar_producto.
-from metodos_productos import ( ingresar_producto , 
-	mostrar_productos , buscar_producto , eliminar_producto )
+from metodos_productos import ( 
+	ingresar_producto,
+	mostrar_productos,
+	buscar_producto,
+	eliminar_producto 
+)
 
 #De menu.py importa los metodos: 
 #limpiar_pantalla, mostrar_menu, ejecutar_opcion, ingresar_opcion.
-from menu import ( limpiar_pantalla , mostrar_menu , 
-	ejecutar_opcion , ingresar_opcion )
+from menu import (
+	limpiar_pantalla,
+	mostrar_menu,
+	ejecutar_opcion,
+	ingresar_opcion 
+)
     
 """
 Es el programa principal, repetitivamente limpia la terminal(hasta ingresar terminar program), 

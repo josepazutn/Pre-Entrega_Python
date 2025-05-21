@@ -3,10 +3,12 @@
 import os
 import opciones
 
-from metodos_productos import ( ingresar_producto, 
-	mostrar_productos, buscar_producto, eliminar_producto)
-
-
+from metodos_productos import (
+	ingresar_producto, 
+	mostrar_productos,
+	buscar_producto,
+	eliminar_producto
+)
 
 """
 Refresca o limpia la terminal

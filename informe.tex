@@ -1,0 +1,131 @@
+\documentclass[12pt]{article}
+%pdflatex -shell-escape informe.tex 
+
+
+% --- Paquetes básicos ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish, provide=*]{babel}
+\usepackage{geometry}
+\geometry{a4paper, margin=2.5cm}
+
+% --- Carátula ---
+\title{Python Inicial}
+\author{Jose Miguel Paz Portilla\\Pre-Entrega de Proyecto}
+\date{\today}
+
+% --- Código Python con minted ---
+\usepackage{minted} % Requiere -shell-escape
+\usemintedstyle{friendly}
+
+% --- Otros paquetes útiles ---
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[L]{Python Inicial}
+\fancyhead[R]{\thepage}
+
+\begin{document}
+
+% Carátula
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+% Índice
+\tableofcontents
+\newpage
+
+\section{Introducción}
+
+Con el objetivo de realizar un inventario de productos realizados en python, se realizo una version preliminar con los siguientes requisitos:
+
+\begin{enumerate}
+	\item Usar listas para almacenar y gestionar los datos.
+	\item Incorporar bucles while y for según corresponda. 
+	\item Validar entradas del usuario o usuaria, asegurándote de que no se ingresen datos vacíos o incorrectos.
+	\item Utilizar condicionales para gestionar las opciones del menú y las validaciones necesarias.
+	\item Presentar un menú que permita elegir entre las funcionalidades disponibles: agregar productos, visualizar productos, buscar productos y eliminar productos.
+	\item El programa debe continuar funcionando hasta que se elija una opción para salir.
+\end{enumerate}
+
+\section{Implementación}
+
+Utilizo la función main como función principal del programa, en cual muestra un menu con opciones al usuario, y según la opcion elegida realiza alguno de los requisitos solicitados.
+
+\begin{figure}[H]
+	\centering
+	\setlength{\fboxrule}{0pt}
+	\includegraphics[width=0.66\textwidth]{img7.png}
+	\caption{Como correr el programa desde terminal}
+	\label{fig:Correr el programa}
+\end{figure}  
+
+\begin{figure}[H]
+	\centering
+	\setlength{\fboxrule}{0pt}
+	\includegraphics[width=0.4\textwidth]{img1.png}
+	\caption{Mostrando el menu}
+	\label{fig:menu}
+\end{figure} 
+
+\begin{figure}[H]
+	\centering
+	\setlength{\fboxrule}{0pt}
+	\includegraphics[width=0.5\textwidth]{img2.png}
+	\caption{Ingreso nuevo producto}
+	\label{fig:nuevo producto}
+\end{figure} 
+
+\begin{figure}[H]
+	\centering
+	\setlength{\fboxrule}{0pt}
+	\includegraphics[width=0.5\textwidth]{img3.png}
+	\caption{Mostrar productos}
+	\label{fig:mostras productos}
+\end{figure} 
+
+\begin{figure}[H]
+	\centering
+	\setlength{\fboxrule}{0pt}
+	\includegraphics[width=0.5\textwidth]{img4.png}
+	\caption{Buscar producto por nombre}
+	\label{fig:buscar producto}
+\end{figure} 
+
+\begin{figure}[H]
+	\centering
+	\setlength{\fboxrule}{0pt}
+	\includegraphics[width=0.5\textwidth]{img5.png}
+	\caption{Eliminar producto por indice}
+	\label{fig:eliminar producto}
+\end{figure} 
+
+\begin{figure}[H]
+	\centering
+	\setlength{\fboxrule}{0pt}
+	\includegraphics[width=0.66\textwidth]{img6.png}
+	\caption{Finalizacion del programa}
+	\label{fig:fin programa}
+\end{figure} 
+
+\section{makefile}
+\inputminted[fontsize=\small]{make}{makefile}
+
+\section{main.py}
+\inputminted[fontsize=\small, breaklines=true]{python}{main.py}
+
+\section{menu.py}
+\inputminted[fontsize=\small, breaklines=true]{python}{menu.py}
+
+\section{opciones.py}
+\inputminted[fontsize=\small, breaklines=true]{python}{opciones.py}
+
+\section{metodos\_productos.py}
+\inputminted[fontsize=\small, breaklines=true]{python}{metodos_productos.py}
+
+\section{Conclusión}
+
+En este informe realizado al combinar \LaTeX y Python se presenta una simplificación del programa inventario.
+
+\end{document}

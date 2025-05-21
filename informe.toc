@@ -1,0 +1,9 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Introducción}{3}{}%
+\contentsline {section}{\numberline {2}Implementación}{3}{}%
+\contentsline {section}{\numberline {3}makefile}{4}{}%
+\contentsline {section}{\numberline {4}main.py}{4}{}%
+\contentsline {section}{\numberline {5}menu.py}{5}{}%
+\contentsline {section}{\numberline {6}opciones.py}{6}{}%
+\contentsline {section}{\numberline {7}metodos\_productos.py}{6}{}%
+\contentsline {section}{\numberline {8}Conclusión}{8}{}%

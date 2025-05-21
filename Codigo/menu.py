@@ -8,14 +8,23 @@ from metodos_productos import ( ingresar_producto,
 
 
 
-
+"""
+Refresca o limpia la terminal
+Parámetros:-
+Retorna:-
+"""
 def limpiar_pantalla():
 	# os.system: Ejecuta un comando del sistema operativo 
 	# como si se escribiera en la terminal.
 	# Si el nombre del sistema operativo es windows utiliza cls,
 	# sino utiliza clear para refrescar la pantalla
     os.system('cls' if os.name == 'nt' else 'clear')
-
+    
+"""
+Muestra las opciones del menu por la terminal
+Parámetros:-
+Retorna:-
+"""
 def mostrar_menu ():
     print ("--- MENÚ DE OPCIONES ---")
     print ("1. Ingresar un nuevo producto")
@@ -24,11 +33,21 @@ def mostrar_menu ():
     print ("4. Eliminar un producto")
     print ("5. Salir")
     
+"""
+Muestra las opciones del menu por la terminal
+Parámetros:-
+Retorna:la opcion que se ingreso por teclado, 
+eliminando los espacios en blanco al inicio y al final
+"""    
 def ingresar_opcion ():
-	#.strip() elimina los espacios en blanco al inicio y al final de una cadena
 	opcion = input ( "Seleccionar una opción (1-5): " ).strip()
 	return opcion
 
+"""
+Realiza la opcion sobre la lista de productos
+Parámetros:- opcion a realizar y la lista de productos
+Retorna:Bool para indicar si debe seguir pidiendo opciones o no
+""" 
 def ejecutar_opcion ( opcion , productos ) :
 	match opcion:
 		case opciones.INGRESAR_NUEVO_PRODUCTO:

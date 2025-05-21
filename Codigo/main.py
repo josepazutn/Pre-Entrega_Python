@@ -1,6 +1,6 @@
 # Pre_Entrega
-# Nombre: Jose Miguel 
-# Apellido: Paz Portilla
+# Alumno: Paz Portilla, Jose Miguel
+# Comision: 25010
 
 #De metodos_productos.py importa los metodos: 
 #ingresar_producto, mostrar_productos, buscar_producto, eliminar_producto.
@@ -12,7 +12,12 @@ from metodos_productos import ( ingresar_producto ,
 from menu import ( limpiar_pantalla , mostrar_menu , 
 	ejecutar_opcion , ingresar_opcion )
     
-#Funcion principal
+"""
+Es el programa principal, repetitivamente limpia la terminal(hasta ingresar terminar program), 
+muestra un menu de opciones, toma la opcion y realiza alguna accion sobre productos a partir de ella.
+Parámetros:-
+Retorna:-
+""" 
 def main () :
 
 	productos = [] 

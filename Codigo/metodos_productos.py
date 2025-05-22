@@ -15,27 +15,40 @@ def ingresar_producto ( productos ):
 		nombre = input("Ingrese el nombre del producto: ").strip()
 		if nombre != "":
 			break
-		print("El nombre no puede estar vacío.")
+		print("ERROR: NOMBRE DE PRODUCTO ESTA VACIA")
 
 	while True:
 		categoria = input("Ingrese la categoría del producto: ").strip()
 		if categoria != "":
 			break
-		print("La categoría no puede estar vacía.")
+		print("ERROR: NOMBRE DE LA CATEGORIA ESTA VACIA")
 
 	while True:
 		#Bloque para atrape el error de conversion de cadena a entero
 		try:
 			precio = int(input("Ingrese el precio del producto (sin centavos): "))
 			if precio < 0:
-				print("El precio no puede ser negativo.")
+				print("ERROR: EL PRECIO INGRESADO ES NEGATIVO")
 				continue
 			break
 		except ValueError:
-			print("Entrada inválida. Ingrese un número entero.")
+			print("ERROR: EL PRECIO NO ES UN VALOR ENTERO")
 
 	producto = [nombre, categoria, precio]
-	productos.append (producto)
+	
+	# Insertar producto en la lista de productos ordenado por nombre
+	producto_fue_insertado = False
+	for indice in range(len(productos)):#i va de 0 hasta len(productos)-1
+		# compara ignorando mayúsculas/minúsculas
+		if nombre.lower() < productos[indice][NOMBRE].lower():  
+			productos.insert (indice, producto)
+			producto_fue_insertado = True
+			break
+	# Si no fue ingresado producto en la lista de productos,
+	# debido a que al compararlo no hubo otro nombre menor alfabeticamente,
+	# Simplemente de agrega el producto al final de la lista productos 
+	if not producto_fue_insertado:
+		productos.append(producto)
 
 """
 Muestra por terminal la lista de productos
@@ -53,7 +66,7 @@ def mostrar_productos ( productos ) :
     # Empieza a enumerar desde 1 el i, y va deserializando producto de la lista_productos
     for indice, producto in enumerate( productos , start = 1 ):
         nombre, categoria, precio = producto
-        print(f"{indice}. Nombre: {nombre} | Categoría: {categoria} | Precio: ${precio}")
+        print(f"{indice}. NOMBRE: {nombre} | CATEGORÍA: {categoria} | PRECIO: ${precio}")
 
 """
 Busca en la lista de productos los productos que coinciden con el nombre de productos
@@ -67,7 +80,7 @@ def buscar_producto ( productos ):
 	# Borra espacios de los bordes y lo paso a minusculas
 	nombre = input("Ingresar el nombre del producto a buscar: ").strip().lower()
 	if nombre == "":
-		print("El término de búsqueda no puede estar vacío.")
+		print("ERROR: NOMBRE DE PRODUCTO A BUSCAR ESTA VACIA")
 		return
 
 	encontrados = []
@@ -80,7 +93,7 @@ def buscar_producto ( productos ):
 			nombre, categoria, precio = encontrado
 			print(f"{indice}. Nombre: {nombre} | Categoría: {categoria} | Precio: ${precio}")
 	else:
-		print("No se encontraron productos con ese nombre.")
+		print(" NOMBRE DE PRODUCTO NO ESTA EN EL INVENTARIO")
 
 """
 Elimina un producto de la lista de productos a partir de la posicion mostrada por terminal
@@ -91,7 +104,7 @@ Retorna:-
 def eliminar_producto ( productos ):
 	print ("--- ELIMINACION DE PRODUCTO ---")
 	if len(productos) == 0:
-		print ("No hay productos para eliminar.")
+		print ("INVENTARIO ESTÁ VACIO")
 		return
 
 	mostrar_productos(productos)  
@@ -103,7 +116,7 @@ def eliminar_producto ( productos ):
 				eliminado = productos.pop ( indice - 1 ) 
 				break
 			else:
-				print("Número inválido. Intente nuevamente.")
+				print("ERROR: OPCION DE LA LISTA DE PRODUCTOS FUERA DE RANGO")
 		except ValueError:
-			print("Entrada inválida. Ingrese un número entero.")
+			print("ERROR: INGRESO DE UN NUMERO NO ENTERO")
 

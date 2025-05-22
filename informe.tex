@@ -8,6 +8,7 @@
 \usepackage[spanish, provide=*]{babel}
 \usepackage{geometry}
 \usepackage{hyperref}
+\usepackage{subcaption}  % En el preámbulo
 \geometry{a4paper, margin=2.5cm}
 \setlength{\headheight}{14.5pt}
 \addtolength{\topmargin}{-2.5pt}
@@ -61,7 +62,7 @@ Para correr el programa desde una terminal ubicada donde se encuentran los archi
 \begin{figure}[H]
 	\centering
 	\setlength{\fboxrule}{0pt}
-	\includegraphics[width=0.66\textwidth]{Imagenes/img7.png}
+	\includegraphics[width=0.66\textwidth]{Imagenes/img0.png}
 	\caption{Como correr el programa desde terminal}
 	\label{fig:Correr el programa}
 \end{figure}  
@@ -124,6 +125,93 @@ Finalmente para finalizar el programa se ingresa la opción $5$, y se muestra po
 	\caption{Finalizacion del programa}
 	\label{fig:fin programa}
 \end{figure} 
+
+\section{Pruebas}
+
+\subsection{Opción fuera del rango}
+
+Como se observa en la \autoref{fig:error rango de opciones}, al ingresar opciones fuera de las opciones del menu 
+el programa evita que se ejecuten.
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Imagenes/img7.png}
+        \caption*{(a) Error por opción por debajo del rango}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Imagenes/img8.png}
+        \caption*{(b) Error por opción por encima del rango}
+    \end{subfigure}
+
+    \caption{Errores por elegir opciones fuera del rango}
+    \label{fig:error rango de opciones}
+\end{figure}
+
+\subsection{Campos del producto}
+
+Como se observa en la \autoref{fig:error en campos de producto}, al ingresar campos vacios del nombre o categoria del producto o bien si se 
+ingresa valores negativos o reales al precio del producto, el sistema no permite continuar con la ejecución del programa.
+
+\begin{figure}[H]
+	\centering
+	\setlength{\fboxrule}{0pt}
+	\includegraphics[width=0.6\textwidth]{Imagenes/img9.png}
+	\caption{Pruebas al ingresar los campos del producto}
+	\label{fig:error en campos de producto}
+\end{figure} 
+
+\subsection{Busqueda de producto por nombre}
+
+Al ingresar varios productos, se guardan en la lista en forma ordenada alfabeticamente por nombre. Cuando se busca un nombre de un producto
+se genera una sublista con las coincidencias y se muestra por la terminal en caso en encontrar como se muestra en la \autoref{fig:busqueda de producto}, sino muestra un mensaje que el producto no esta en el inventario.
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.6\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Imagenes/img10.png}
+        \caption*{(a) Productos en el inventario}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.6\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Imagenes/img11.png}
+        \caption*{(b) Busqueda de un producto por nombre encontrado}
+    \end{subfigure}
+
+    \caption{Busqueda de producto por  nombre}
+    \label{fig:busqueda de producto}
+\end{figure}
+
+\subsection{Eliminación de producto por posición}
+
+Como se muestra en la \autoref{fig:eliminacion de producto}, en la terminal se observan los productos que hay en el inventario, junto a un numero, para eliminar por ejemplo naranja, se ingresa su posición en la lista mostrada que es $3$, luego se vuelve a mostrar los productos y se observa que fue eliminado del inventario.
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.6\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Imagenes/img12.png}
+        \caption*{(a) Posición del producto a eliminar}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.6\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Imagenes/img13.png}
+        \caption*{(b) Inventario despues de eliminar el producto}
+    \end{subfigure}
+
+    \caption{Eliminación de producto por posición en el menú}
+    \label{fig:eliminacion de producto}
+\end{figure}
+
+
+
 
 \section{makefile}
 \inputminted[fontsize=\small]{make}{Codigo/makefile}
